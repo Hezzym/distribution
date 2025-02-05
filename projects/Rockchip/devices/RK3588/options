@@ -81,3 +81,9 @@
 
   # Some devices have internal storage.
     INSTALLER_SUPPORT="yes"
+
+	  # additional drivers to install:
+  # for a list of additional drivers see packages/linux-drivers
+  # Space separated list is supported,
+  # e.g. ADDITIONAL_DRIVERS="DRIVER1 DRIVER2"
+    ADDITIONAL_DRIVERS="RTL8852BE"
