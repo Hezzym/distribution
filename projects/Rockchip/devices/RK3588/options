@@ -86,4 +86,4 @@
   # for a list of additional drivers see packages/linux-drivers
   # Space separated list is supported,
   # e.g. ADDITIONAL_DRIVERS="DRIVER1 DRIVER2"
-    ADDITIONAL_DRIVERS="RTL8852BE"
+    ADDITIONAL_DRIVERS="RTL8852BE RTL8821CU"
