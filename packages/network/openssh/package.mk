@@ -55,4 +55,6 @@ post_makeinstall_target() {
 
 post_install() {
   enable_service sshd.service
+  mkdir -p ${INSTALL}/etc/ssh
+  cp -rf ${PKG_DIR}/config/sshd_config ${INSTALL}/etc/ssh/
 }
