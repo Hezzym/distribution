@@ -10,7 +10,7 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-#Port 22
+Port 9696
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
@@ -29,12 +29,13 @@
 # Authentication:
 
 #LoginGraceTime 2m
+PermitRootLogin prohibit-password
 PermitRootLogin yes
 StrictModes no
-#MaxAuthTries 6
-#MaxSessions 10
+MaxAuthTries 3
+MaxSessions 2
 
-#PubkeyAuthentication yes
+PubkeyAuthentication yes
 
 # The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
 # but this is overridden so installations will only check .ssh/authorized_keys
@@ -54,8 +55,8 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-#PasswordAuthentication yes
-#PermitEmptyPasswords no
+PasswordAuthentication no 
+PermitEmptyPasswords no
 
 # Change to no to disable s/key passwords
 #KbdInteractiveAuthentication yes
@@ -84,7 +85,7 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
 #GatewayPorts no
-#X11Forwarding no
+X11Forwarding no
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
@@ -93,8 +94,8 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #TCPKeepAlive yes
 #PermitUserEnvironment no
 #Compression delayed
-#ClientAliveInterval 0
-#ClientAliveCountMax 3
+ClientAliveInterval 300
+ClientAliveCountMax 3
 #UseDNS no
 #PidFile /var/run/sshd.pid
 #MaxStartups 10:30:100
